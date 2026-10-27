@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File a Claim | Travel2U</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">T</span>
+      <span class="logo-text">Travel<span>2U</span></span>
+    </a>
+
+
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-us.html" class="nav-link">About Us</a>
+      <a href="insurance-plans.html" class="nav-link">Insurance Plans</a>
+      <a href="get-a-quote.html" class="nav-link">Get a Quote</a>
+
+
+      <div class="nav-item">
+        <a href="claims.html" class="nav-link active">Claims</a>
+        <div class="dropdown">
+          <a href="how-to-file.html" class="nav-link">File a New Claim</a>
+          <a href="faqs.html" class="nav-link">FAQs</a>
+        </div>
+      </div>
+
+
+      <a href="my-account.html" class="nav-link">My Account</a>
+      <a href="contact-us.html" class="nav-link">Contact Us</a>
+    </nav>
+  </header>
+
+
+  <section class="page-title">
+    <h1>File a Claim</h1>
+    <p>Complete the five steps below. It only takes a few minutes.</p>
+  </section>
+
+
+  <main class="container">
+
+
+    <ol class="progress">
+      <li class="progress-step active">1. Policy Verification</li>
+      <li class="progress-step">2. Contact &amp; Personal Info</li>
+      <li class="progress-step">3. Incident Details</li>
+      <li class="progress-step">4. Digital Evidence</li>
+      <li class="progress-step">5. Review &amp; Submit</li>
+    </ol>
+
+
+    <form id="claim-form" class="card">
+
+
+      <div class="form-step active">
+        <h2>Step 1: Policy Verification</h2>
+        <p class="hint">Enter your policy details so we can confirm your coverage.</p>
+
+
+        <div class="field">
+          <label for="policy-number">Policy Number</label>
+          <input type="text" id="policy-number" data-label="Policy Number" placeholder="e.g. T2U-123456" required>
+        </div>
+        <div class="field">
+          <label for="holder-name">Policyholder's Full Name</label>
+          <input type="text" id="holder-name" data-label="Policyholder" required>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="birthdate">Date of Birth</label>
+            <input type="date" id="birthdate" data-label="Date of Birth" required>
+          </div>
+          <div class="field">
+            <label for="plate">Vehicle Plate Number</label>
+            <input type="text" id="plate" data-label="Plate Number" placeholder="e.g. ABC 1234" required>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-step">
+        <h2>Step 2: Contact &amp; Personal Information</h2>
+        <p class="hint">Tell us how we can reach you about your claim.</p>
+
+
+        <div class="row">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" data-label="First Name" required>
+          </div>
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" data-label="Last Name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" data-label="Email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile Number</label>
+            <input type="tel" id="phone" data-label="Mobile Number" placeholder="09XX XXX XXXX" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="address">Home Address</label>
+          <input type="text" id="address" data-label="Address" required>
+        </div>
+      </div>
+
+
+      <div class="form-step">
+        <h2>Step 3: Incident Details</h2>
+        <p class="hint">Describe what happened as clearly as you can.</p>
+
+
+        <div class="field">
+          <label for="incident-type">Type of Incident</label>
+          <select id="incident-type" data-label="Incident Type" required>
+            <option value="">-- Select --</option>
+            <option>Collision</option>
+            <option>Theft</option>
+            <option>Fire</option>
+            <option>Flood or Natural Disaster</option>
+            <option>Vandalism</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="incident-date">Date of Incident</label>
+            <input type="date" id="incident-date" data-label="Incident Date" required>
+          </div>
+          <div class="field">
+            <label for="incident-time">Time of Incident</label>
+            <input type="time" id="incident-time" data-label="Incident Time" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="location">Location of Incident</label>
+          <input type="text" id="location" data-label="Location" required>
+        </div>
+        <div class="field">
+          <label for="description">What Happened?</label>
+          <textarea id="description" data-label="Description" rows="5" required></textarea>
+        </div>
+      </div>
+
+
+      <div class="form-step">
+        <h2>Step 4: Digital Evidence</h2>
+        <p class="hint">Upload photos of the damage and any documents, such as a police report.</p>
+
+
+        <div class="field">
+          <label for="evidence">Upload Photos / Documents</label>
+          <input type="file" id="evidence" accept="image/*,.pdf" multiple required>
+          <ul id="file-names"></ul>
+        </div>
+      </div>
+
+
+      <div class="form-step">
+        <h2>Step 5: Review &amp; Submit</h2>
+        <p class="hint">Please check your details. Use "Back" if you need to change anything.</p>
+
+
+        <table class="review-table" id="review-table"></table>
+
+
+        <label class="agree">
+          <input type="checkbox" id="agree" required>
+          I confirm that the information above is true and correct.
+        </label>
+      </div>
+
+
+      <div class="form-buttons">
+        <button type="button" class="btn btn-outline" id="back-btn">Back</button>
+        <button type="button" class="btn" id="next-btn">Next</button>
+        <button type="submit" class="btn" id="submit-btn">Submit Claim</button>
+      </div>
+
+
+    </form>
+
+
+    <div class="card" id="success">
+      <h2>Claim Submitted!</h2>
+      <p>Thank you. Your claim reference number is:</p>
+      <p><strong id="reference"></strong></p>
+      <p class="hint">A claims officer will contact you within 2 business days.</p>
+      <a href="claims.html" class="btn">Back to Claims</a>
+    </div>
+
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 Travel2U Car Insurance. All rights reserved.</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

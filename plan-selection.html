@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Selection | Travel2U</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">T</span>
+      <span class="logo-text">Travel<span>2U</span></span>
+    </a>
+
+
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-us.html" class="nav-link">About Us</a>
+      <a href="insurance-plans.html" class="nav-link">Insurance Plans</a>
+
+
+      <div class="nav-item">
+        <a href="get-a-quote.html" class="nav-link active">Get a Quote</a>
+        <div class="dropdown">
+          <a href="vehicle-info.html" class="nav-link">Vehicle Information</a>
+          <a href="plan-selection.html" class="nav-link">Plan Selections</a>
+        </div>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="claims.html" class="nav-link">Claims</a>
+        <div class="dropdown">
+          <a href="how-to-file.html" class="nav-link">File a New Claim</a>
+          <a href="faqs.html" class="nav-link">FAQs</a>
+        </div>
+      </div>
+
+
+      <a href="my-account.html" class="nav-link">My Account</a>
+      <a href="contact-us.html" class="nav-link">Contact Us</a>
+    </nav>
+  </header>
+
+
+  <section class="banner">
+    <img src="images/plans-banner.jpg" alt="Plans banner">
+    <div class="banner-text">
+      <h1>Plan Selection</h1>
+      <p>Choose the coverage that fits your car and budget.</p>
+    </div>
+  </section>
+
+
+  <main class="wide-container">
+
+
+    <div class="notice" id="vehicle-summary" style="display: none;">
+      Quote for: <strong id="vehicle-text"></strong>
+    </div>
+
+
+    <div class="notice" id="no-vehicle">
+      Want a quote that matches your car? <a href="vehicle-info.html">Enter your vehicle information</a> first.
+    </div>
+
+
+    <section class="plans">
+
+
+      <div class="plan-card" id="plan-basic">      
+        <div class="plan-body">
+          <h2>Basic Plan</h2>
+          <p class="plan-for">Essential protection for the road</p>
+          <p class="price">&#8369;6,500 <span>/ year</span></p>
+          <ul class="plan-features">
+            <li class="yes">Third-party liability</li>
+            <li class="yes">Compulsory third-party cover</li>
+            <li class="no">Own damage coverage</li>
+            <li class="no">Theft protection</li>
+            <li class="no">Acts of nature</li>
+            <li class="no">Roadside assistance</li>
+          </ul>
+          <button class="btn choose-btn" data-plan="Basic Plan" data-price="6,500">Choose Basic</button>
+        </div>
+      </div>
+
+
+      <div class="plan-card recommended" id="plan-standard">
+        <span class="badge">Recommended</span>
+        <div class="plan-body">
+          <h2>Standard Plan (Recommended)</h2>
+          <p class="plan-for">The best balance of price and protection</p>
+          <p class="price">&#8369;12,500 <span>/ year</span></p>
+          <ul class="plan-features">
+            <li class="yes">Third-party liability</li>
+            <li class="yes">Compulsory third-party cover</li>
+            <li class="yes">Own damage coverage</li>
+            <li class="yes">Theft protection</li>
+            <li class="no">Acts of nature</li>
+            <li class="yes">Roadside assistance</li>
+          </ul>
+          <button class="btn choose-btn" data-plan="Standard Plan" data-price="12,500">Choose Standard</button>
+        </div>
+      </div>
+
+
+      <div class="plan-card" id="plan-premium">
+        <div class="plan-body">
+          <h2>Premium Plan</h2>
+          <p class="plan-for">Complete, worry-free coverage</p>
+          <p class="price">&#8369;19,800 <span>/ year</span></p>
+          <ul class="plan-features">
+            <li class="yes">Third-party liability</li>
+            <li class="yes">Compulsory third-party cover</li>
+            <li class="yes">Own damage coverage</li>
+            <li class="yes">Theft protection</li>
+            <li class="yes">Acts of nature</li>
+            <li class="yes">24/7 roadside assistance</li>
+          </ul>
+          <button class="btn choose-btn" data-plan="Premium Plan" data-price="19,800">Choose Premium</button>
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <section class="card" id="selection-summary" style="display: none;">
+      <h2>Your Selected Plan</h2>
+      <p><strong id="chosen-plan"></strong> &ndash; &#8369;<span id="chosen-price"></span> per year</p>
+      <p id="chosen-vehicle"></p>
+      <div class="form-buttons">
+        <button type="button" class="btn btn-outline" id="change-btn">Change Plan</button>
+        <button type="button" class="btn" id="confirm-btn">Get My Quote</button>
+      </div>
+    </section>
+
+
+    <section class="card center" id="quote-success" style="display: none;">
+      <h2>Quote Request Sent!</h2>
+      <p>Your quote reference number is:</p>
+      <p><strong id="quote-reference"></strong></p>
+      <p class="hint">An agent will contact you within 1 business day.</p>
+      <a href="get-a-quote.html" class="btn">Back to Get a Quote</a>
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 Travel2U Car Insurance. All rights reserved.</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Information | Travel2U</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">T</span>
+      <span class="logo-text">Travel<span>2U</span></span>
+    </a>
+
+
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about-us.html" class="nav-link">About Us</a>
+      <a href="insurance-plans.html" class="nav-link">Insurance Plans</a>
+
+
+      <div class="nav-item">
+        <a href="get-a-quote.html" class="nav-link active">Get a Quote</a>
+        <div class="dropdown">
+          <a href="vehicle-info.html" class="nav-link">Vehicle Information</a>
+          <a href="plan-selection.html" class="nav-link">Plan Selections</a>
+        </div>
+      </div>
+
+
+      <div class="nav-item">
+        <a href="claims.html" class="nav-link">Claims</a>
+        <div class="dropdown">
+          <a href="how-to-file.html" class="nav-link">File a New Claim</a>
+          <a href="faqs.html" class="nav-link">FAQs</a>
+        </div>
+      </div>
+
+
+      <a href="my-account.html" class="nav-link">My Account</a>
+      <a href="contact-us.html" class="nav-link">Contact Us</a>
+    </nav>
+  </header>
+
+
+  <section class="banner">
+    <img src="images/vehicle-banner.jpg" alt="Car banner">
+    <div class="banner-text">
+      <h1>Vehicle Information</h1>
+      <p>Tell us about your car. Step 1 of 2</p>
+    </div>
+  </section>
+
+
+  <main class="container">
+
+
+    <form id="vehicle-form" class="card">
+      <h2>Your Car Details</h2>
+      <p class="hint">All fields are required.</p>
+
+
+      <div class="row">
+        <div class="field">
+          <label for="year">Year</label>
+          <select id="year" required>
+            <option value="">-- Select year --</option>
+           
+          </select>
+        </div>
+        <div class="field">
+          <label for="make">Make</label>
+          <input type="text" id="make" placeholder="e.g. Toyota" required>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="field">
+          <label for="model">Model</label>
+          <input type="text" id="model" placeholder="e.g. Vios" required>
+        </div>
+        <div class="field">
+          <label for="plate">Plate Number</label>
+          <input type="text" id="plate" placeholder="e.g. ABC 1234" required>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label for="vin">Vehicle Identification Number (VIN)</label>
+        <input type="text" id="vin" maxlength="17" placeholder="17 characters"
+               pattern="[A-HJ-NPR-Za-hj-npr-z0-9]{17}"
+               title="A VIN has 17 letters and numbers (the letters I, O, and Q are not used)." required>
+        <p class="hint">You can find the VIN on your car's registration (CR) or on the dashboard near the windshield.</p>
+      </div>
+
+
+      <div class="field">
+        <label for="use">Primary Use</label>
+        <select id="use" required>
+          <option value="">-- Select --</option>
+          <option>Private / Personal</option>
+          <option>Business</option>
+          <option>Public Transport / Ride-hailing</option>
+        </select>
+      </div>
+
+
+      <div class="form-buttons">
+        <a href="get-a-quote.html" class="btn btn-outline">Back</a>
+        <button type="submit" class="btn">Next</button>
+      </div>
+    </form>
+
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 Travel2U Car Insurance. All rights reserved.</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
