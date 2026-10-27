@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel2U - Insurance Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .plan-view { display: none; }
+        .plan-view.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- WEBSITE HEADER -->
+    <header class="bg-[#0b1d3a] text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <a href="index.html" class="flex items-center space-x-3 no-underline">
+                    <div class="w-11 h-11 bg-teal-400 rounded-xl flex items-center justify-center shadow-md text-slate-950 font-black text-2xl tracking-tight">
+                        T
+                    </div>
+                    <span class="text-2xl font-black tracking-tight text-white">Travel<span class="text-teal-400">2U</span></span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-2">
+                    <a href="index.html" class="px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">Home &amp; About Us</a>
+                    <a href="insurance-plans.html" class="px-3 py-2 text-sm font-semibold text-white bg-teal-600 rounded-lg">Insurance Plans</a>
+                    <a href="quote-claims.html" class="px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">Get a Quote &amp; Claims</a>
+                    <a href="contact-legal.html" class="px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">Contact Us &amp; Legal</a>
+                    <a href="login.html" class="px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">My Account</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-300 hover:text-white p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Mobile menu -->
+            <nav id="mobile-menu" class="hidden md:hidden pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800">Home &amp; About Us</a>
+                <a href="insurance-plans.html" class="block px-3 py-2 text-sm font-semibold text-white bg-teal-600 rounded-lg">Insurance Plans</a>
+                <a href="quote-claims.html" class="block px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800">Get a Quote &amp; Claims</a>
+                <a href="contact-legal.html" class="block px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800">Contact Us &amp; Legal</a>
+                <a href="login.html" class="block px-3 py-2 text-sm font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800">My Account</a>
+            </nav>
+        </div>
+        <div class="h-1 bg-teal-400"></div>
+    </header>
+
+    <!-- SIDEBAR + CONTENT -->
+    <div class="flex-grow flex flex-col md:flex-row">
+
+        <aside class="w-full md:w-72 bg-[#0b1d3a] text-white p-6 flex flex-col justify-between shrink-0 shadow-lg">
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-xs font-bold text-teal-400 tracking-wider uppercase mb-2">Categories</h2>
+                    <h3 class="text-xl font-extrabold text-white">Insurance Plans</h3>
+                </div>
+
+                <nav class="space-y-2">
+                    <button onclick="switchTab('core')" id="btn-core" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition text-left bg-teal-600 text-white shadow-md">
+                        <i class="fa-solid fa-shield-halved w-5"></i>
+                        <span>Core Coverages</span>
+                    </button>
+                    <button onclick="switchTab('supplemental')" id="btn-supplemental" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition text-left text-slate-300 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-puzzle-piece w-5"></i>
+                        <span>Supplemental Benefits</span>
+                    </button>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-grow p-6 sm:p-10 bg-slate-50">
+
+            <!-- CORE COVERAGES -->
+            <div id="view-core" class="plan-view active space-y-10 max-w-5xl mx-auto">
+                <div class="border-b border-slate-200 pb-5">
+                    <h1 class="text-3xl font-black text-[#0b1d3a] tracking-tight">Core Coverages</h1>
+                    <p class="text-slate-600 text-sm mt-1">The essentials for protecting your car.</p>
+                </div>
+
+                <article class="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden">
+                    <div class="bg-[#0b1d3a] text-white p-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-teal-400/20 text-teal-300 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold">Comprehensive Insurance</h2>
+                                <p class="text-teal-300 text-xs font-medium">Wide cover for the unexpected</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <p class="text-slate-700 text-sm leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            This is our broadest cover option, designed to protect your vehicle from accidents, theft, and other unexpected damage. It also helps with legal costs when you are held responsible for an incident on the road.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-emerald-50/60 rounded-xl p-5 border border-emerald-100">
+                                <h3 class="text-emerald-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Key Benefits
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-emerald-950 block">Damage Cover:</strong> Helps with repair or replacement costs after accidents, theft, or other covered events.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Roadside Support:</strong> Help is available when you need a tow, emergency assistance, or basic roadside help.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Legal Protection:</strong> Can help with legal costs if a claim or accident leads to a dispute.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-rose-50/60 rounded-xl p-5 border border-rose-100">
+                                <h3 class="text-rose-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-xmark text-rose-600 mr-2"></i> Exclusions
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-rose-950 block">Mechanical Issues:</strong> Routine wear and tear or faults unrelated to an accident are not covered.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Personal Belongings:</strong> Items left in the car, such as electronics or valuables, are not included.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Impaired Driving:</strong> Cover does not apply when the driver is under the influence or otherwise not fit to drive.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden">
+                    <div class="bg-[#0b1d3a] text-white p-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-teal-400/20 text-teal-300 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold">Third-Party Liability (TPL)</h2>
+                                <p class="text-teal-300 text-xs font-medium">Cover for damage caused to others</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <p class="text-slate-700 text-sm leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            This plan helps when your vehicle causes damage to someone else’s property or injures another person. It is designed to protect you from the financial side of those claims, but it does not cover damage to your own vehicle.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-emerald-50/60 rounded-xl p-5 border border-emerald-100">
+                                <h3 class="text-emerald-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Key Benefits
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-emerald-950 block">Injury Claims:</strong> Helps with medical costs and related expenses for third parties injured by your vehicle.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Funeral Support:</strong> Offers financial support in serious cases involving a third party’s death.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Property Damage:</strong> Helps cover repairs or losses caused to other people’s property.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-rose-50/60 rounded-xl p-5 border border-rose-100">
+                                <h3 class="text-rose-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-xmark text-rose-600 mr-2"></i> Exclusions
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-rose-950 block">Your Own Vehicle:</strong> Repairs or replacement costs for your own car are not included.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Your Own Injury:</strong> Medical or funeral costs for the insured driver are excluded.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Unapproved Use:</strong> Cover does not apply for racing, illegal use, or driving an unregistered vehicle.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden">
+                    <div class="bg-[#0b1d3a] text-white p-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-teal-400/20 text-teal-300 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold">Personal Accident Coverage</h2>
+                                <p class="text-teal-300 text-xs font-medium">Support for you and your passengers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <p class="text-slate-700 text-sm leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            If you or a passenger is injured in a road accident, this cover helps with medical expenses and the financial pressure that can come with serious injury. It is designed to give you support when you need it most.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-emerald-50/60 rounded-xl p-5 border border-emerald-100">
+                                <h3 class="text-emerald-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Key Benefits
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-emerald-950 block">Accidental Death Benefit:</strong> A lump-sum payment may be made to your beneficiaries if a road accident leads to death.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Disability Support:</strong> Helps with income and expenses if a serious injury leaves you unable to work.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Medical Costs:</strong> Covers hospital and treatment expenses arising from an accident.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-rose-50/60 rounded-xl p-5 border border-rose-100">
+                                <h3 class="text-rose-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-xmark text-rose-600 mr-2"></i> Exclusions
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-rose-950 block">Illegal Activity:</strong> Cover does not apply to criminal or unlawful acts.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Invalid License:</strong> Claims are excluded if the driver was not properly licensed.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Impaired Condition:</strong> Driving under the influence or while physically or mentally unfit is not covered.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SUPPLEMENTAL BENEFITS -->
+            <div id="view-supplemental" class="plan-view space-y-10 max-w-5xl mx-auto">
+                <div class="border-b border-slate-200 pb-5">
+                    <h1 class="text-3xl font-black text-[#0b1d3a] tracking-tight">Supplemental Benefits</h1>
+                    <p class="text-slate-600 text-sm mt-1">Extra protection for the things standard cover does not fully handle.</p>
+                </div>
+
+                <article class="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden">
+                    <div class="bg-[#0b1d3a] text-white p-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-teal-400/20 text-teal-300 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold">Add-on Coverage</h2>
+                                <p class="text-teal-300 text-xs font-medium">Extra cover for the gaps in standard plans</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-6">
+                        <p class="text-slate-700 text-sm leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            Add-on coverage gives you more protection beyond your standard policy. It is useful when you want to cover items or situations that are not fully included in your main insurance.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-emerald-50/60 rounded-xl p-5 border border-emerald-100">
+                                <h3 class="text-emerald-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Key Benefits
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-emerald-950 block">Personal Effects Coverage:</strong> Helps replace or repair belongings kept inside your vehicle.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Loss of Use Coverage:</strong> Supports temporary transport or daily allowance while your car is being repaired.</li>
+                                    <li class="border-t border-emerald-100 pt-2"><strong class="text-emerald-950 block">Zero Depreciation:</strong> Covers replacement costs without reducing for vehicle depreciation.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-rose-50/60 rounded-xl p-5 border border-rose-100">
+                                <h3 class="text-rose-900 font-bold text-sm flex items-center mb-3">
+                                    <i class="fa-solid fa-circle-xmark text-rose-600 mr-2"></i> Exclusions
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                    <li><strong class="text-rose-950 block">Unauthorized Drivers:</strong> Cover does not apply if someone drives without permission or without a valid license.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Mechanical Breakdown:</strong> Engine or mechanical faults are not covered unless specified elsewhere.</li>
+                                    <li class="border-t border-rose-100 pt-2"><strong class="text-rose-950 block">Pre-existing Damage:</strong> Damage that was already present before the add-on was purchased is excluded.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0b1d3a] text-white py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400 space-y-2">
+            <p>&copy; 2026 Travel2U Car Insurance. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var activeClass = "w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition text-left bg-teal-600 text-white shadow-md";
+        var idleClass = "w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-semibold text-sm transition text-left text-slate-300 hover:bg-slate-800 hover:text-white";
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.plan-view').forEach(function (view) {
+                view.classList.remove('active');
+            });
+            document.getElementById('btn-core').className = idleClass;
+            document.getElementById('btn-supplemental').className = idleClass;
+
+            document.getElementById('view-' + tabName).classList.add('active');
+            document.getElementById('btn-' + tabName).className = activeClass;
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
