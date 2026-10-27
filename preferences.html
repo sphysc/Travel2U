@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title> Website Preferences </title>
+</head>
+<!-- WEBSITE HEADER -->
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Travel2U Home">
+            <span class="logo-icon">T</span>
+            <span class="logo-text">Travel<span>2U</span></span>
+        </a>
+
+        <!-- FIVE MAIN WEBSITE SECTIONS -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home & About Us</a>
+
+            <a href="insurance-plans.html" class="nav-link">
+                Insurance Plans
+            </a>
+
+            <a href="quote-claims.html" class="nav-link">
+                Get a Quote & Claims
+            </a>
+
+            <a href="contact-legal.html" class="nav-link">
+                Contact Us & Legal
+            </a>
+
+            <a href="login.html" class="nav-link active"
+               aria-current="page">
+                My Account
+            </a>
+        </nav>
+    </header>
+
+<body>
+    <div class="bg">
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>My Account</h2>
+            <a href="myaccount.html">
+                <span class="material-symbols-outlined">account_circle</span>
+                <h3>My Profile</h3>
+            </a>
+            <a href="policies.html">
+                <span class="material-symbols-outlined">policy</span>
+                <h3>My Policies</h3>
+            </a>
+            <a href="payments.html">
+                <span class="material-symbols-outlined">payments</span>
+                <h3>Payment History</h3>
+            </a>
+            <a href="claims.html">
+                <span class="material-symbols-outlined">cases</span>
+                <h3>Claim History</h3>
+            </a>
+            <a href="#" class="active">
+                <span class="material-symbols-outlined">settings</span>
+                <h3>Settings</h3>
+            </a>
+            <a href="index.html">
+                <span class="material-symbols-outlined">logout</span>
+                <h3>Log Out</h3>
+            </a>
+        </div>
+
+
+    </div>
+    <main>
+       <h2> Settings </h2>
+        <div class="account">
+         <nav class="settings">
+            <a href="settings.html">Personal Information</a>
+            <a href="paymentmethods.html">Payment Methods</a>
+            <a href="#" class="active">Website Preferences</a>
+        </nav>
+        <section class="personalinfo">
+             <div class="edit1">
+            <h5>Website Preferences</h5>
+            </div>
+            <div class="websiteprefer">
+                <div class="preferlist">
+                     <h5>Notifications</h5>
+                    <div class="notifications">
+                        <div class="texts">
+                        <p class="headings">Email Notifcations</p>
+                        <p class="paragraph">Receive necessary information and updates in your email account</p>
+                        </div>
+                        <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="notifications">
+                        <div class="texts">
+                        <p class="headings">SMS Notifcations</p>
+                        <p class="paragraph">Get updates, confirmations, and other necessary information on your mobile phone</p>
+                        </div>
+                        <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="preferlist">
+                     <h5>General</h5>
+                    <div class="notifications">
+                        <div class="texts">
+                        <p class="headings">Language</p>
+                        <p class="paragraph">Change the primary language of the website</p>
+                        </div>
+                        <div class="language">
+                            English
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="texts">
+                        <p class="headings">Cookies and Site Data</p>
+                        <p class="paragraph">Clear saved activity on the website</p>
+                        </div>
+                        <div class="cleardata">
+                        <a href="#">Clear Data</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

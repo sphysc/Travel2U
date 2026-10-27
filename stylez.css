@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DM Sans, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17304f;
+}
+
+.site-header {
+    width: 100%;
+    min-height: 82px;
+    padding: 14px 5%;
+    background: #102747;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 18px rgba(10, 30, 55, 0.18);
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #27a7df;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.logo-text {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    color: #58c6f4;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 12px 13px;
+    color: #e2edf8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background-color: #24496f;
+    color: #ffffff;
+    outline: none;
+}
+
+.nav-link.active {
+    background-color: #1b83bf;
+    color: #ffffff;
+    border-color: #49b9ed;
+}
+
+
+.logo:focus-visible,
+.footer-links a:focus-visible {
+    outline: 2px solid #58c6f4;
+    outline-offset: 4px;
+}
+
+
+@media (max-width: 1100px) {
+    .site-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 4%;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .site-header {
+        position: relative;
+        padding: 16px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 9px 7px;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .nav-link:first-child {
+        grid-column: 1 / -1;
+    }
+}
+html{
+    text-align: center;
+}
+body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.bg{
+    display: flex;
+    flex: 1;
+    min-height: 85vh;
+}
+.image{
+    flex:1;
+    background-image: url(https://i.imgur.com/WT5Vu4R.png);
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{ 
+    flex: 0 0 720px;
+    background-color: #f2f5f3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;      
+}
+.wrapper h1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 50px;
+    color: #064467;
+    text-shadow: 3px 2px 5px rgba(14, 29, 39, 0.379);
+}
+.login{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login button{
+    align-self: center;
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(246, 248, 249);
+    background-color: #0C5D8C;
+}
+
+form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+    border: 2px solid rgb(45, 98, 139);
+    width: 250px;
+}
+
+form input:hover{
+    border-color: rgb(108, 167, 255);
+}
+
+.signup{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5px;
+}
+a{
+    text-decoration: none;
+    color: rgb(45, 98, 139);
+}
+a:hover{
+    color: rgb(112, 152, 183);
+    text-decoration: underline;
+}
+.change{
+    display: flex;          
+    align-items: center;    
+    gap: 15px;
+}
+.change1{
+    display: flex;          
+    align-items: center;    
+    gap: 15px;
+}
+.change2{
+    display: flex;          
+    align-items: center;    
+    gap: 15px;
+}
+#error{
+    color: rgb(245, 88, 88);
+    margin: 0 0 12px;
+}
+

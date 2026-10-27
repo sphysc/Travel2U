@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylez.css" />
+    <title> Log In </title>
+    <script type="text/javascript" src="validation.js" defer> </script>
+</head>
+<!-- WEBSITE HEADER -->
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Travel2U Home">
+            <span class="logo-icon">T</span>
+            <span class="logo-text">Travel<span>2U</span></span>
+        </a>
+
+        <!-- FIVE MAIN WEBSITE SECTIONS -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">Home & About Us</a>
+
+            <a href="insurance-plans.html" class="nav-link">
+                Insurance Plans
+            </a>
+
+            <a href="quote-claims.html" class="nav-link">
+                Get a Quote & Claims
+            </a>
+
+            <a href="contact-legal.html" class="nav-link">
+                Contact Us & Legal
+            </a>
+
+            <a href="login.html" class="nav-link active"
+               aria-current="page">
+                My Account
+            </a>
+        </nav>
+    </header>
+
+<body>
+<div class="bg">
+    <div class="image"></div>
+<div class="wrapper">
+    <h1>Welcome!</h1>
+    <p id="error"></p>
+    <form id="form" class = "login" action="myaccount.html">
+        <div>
+            <input required type="email" name="email" id="email-input" placeholder="Email"> 
+        </div>
+        <div>
+            <input required type="password" name="password" id="password-input" placeholder="Password"> 
+        </div>
+        <button type="submit">Log In</button>
+    </form>
+    <div class="signup">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a> </p>
+    </div>
+</div>
+</div>
+</body>
+</html>
